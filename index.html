@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css"/>
+	<!--
+		<script type="text/javascript" src="script.js"></script> // Will not work for DOM manipulations
+		Reference: https://flaviocopes.com/javascript-async-defer/#the-position-matters
+		Explanation:
+		Using defer or async as below shows desired result. Per the website, the following are the explanation
+		for the attributes:
+		1. async: The script is fetched asynchronously, and it’s executed only after the HTML parsing is done.
+		2. defer: The script is fetched asynchronously, and it’s executed only after the HTML parsing is done.
+-->
+	<script type="text/javascript" src="script.js" defer></script>
+	<title>To-Do List in JavaScript</title>
+</head>
+<body>
+	<head>
+		<h1>To-Do List in JavaScript</h1>
+	</head>
+
+	<main>
+		<div class="instruction">
+			<div class="col-12">
+				<p>Enter tasks in the box</p>
+				<p>Click on the “+” icon to add tasks</p>	
+				<p>To mark task as complete, simply click on the task. To remove, click on the “-” icon</p>
+			</div>
+		</div>
+
+		<div class="input-field">
+			<div class="col-12">
+				<input type="text" id="userInput" class="userInput" placeholder="Insert your task"/>
+				<button type="submist" id="submitButton" class="submitButton">+</button>
+			</div>
+		</div>
+
+		<!--Empty list-->
+		<div class="task">
+			<div class="col-12">
+				<ul class="taskList">
+				</ul>
+			</div>
+		</div>
+		
+
+
+	</main>
+
+	<footer>
+		<div class="foot">Created by Kah Beng</div>
+	</footer>
+	<!--
+		Check why scripting needed to put in the body instead of head?
+		<script type="text/javascript" src="script.js"></script> // Working as intended
+		Reference: https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup
+		Explanation:
+		When loading page, HTML loaded from top to bottom. When  HTML parser finds this line, JavaScript (JS) 
+		file will be downloaded and executed. By putting at the bottom of the page, this ensure all HTML has
+		been downloaded first before JS file executed. Modern interpretation can use defer or async instead
+		at the <head> tag. See above for explanation.
+-->
+</body>
+</html>

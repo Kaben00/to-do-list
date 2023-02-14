@@ -1,0 +1,41 @@
+body {
+	text-align: center;
+	background-color: aliceblue;
+	height: auto;
+}
+
+.instruction ol {
+	text-align: left;
+}
+
+ul {
+	text-align: center;
+	margin-top: 20px;
+	align-items: center;
+}
+
+li {
+	list-style: none;
+	padding: 10px 20px;
+	color: #ffffff;
+	background-color: green;
+	margin: 10px;
+	width: 100px;
+	text-align: center;
+}
+
+footer {
+	bottom: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+.done {
+	background-color: crimson;
+	text-decoration: line-through greenyellow;
+}
+
+.delete {
+	display: none;
+}
